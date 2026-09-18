@@ -1,0 +1,177 @@
+:root {
+  --green: #1b6b3a;
+  --green-light: #e8f5ec;
+  --amber: #b45309;
+  --bg: #f6faf7;
+  --text: #1a2e1f;
+  --border: #c5dcc9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.topbar {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  color: var(--green);
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.panel.muted {
+  opacity: 0.85;
+}
+
+.hint {
+  color: #4a6350;
+  font-size: 0.95rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.row input,
+.row select {
+  width: auto;
+  flex: 1;
+  min-width: 140px;
+}
+
+button,
+.file-btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button.danger {
+  background: #b91c1c;
+}
+
+.file-btn {
+  display: inline-block;
+}
+
+.file-btn.primary {
+  background: #0f766e;
+}
+
+.card {
+  background: var(--green-light);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+.card.warn {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+}
+
+.card.small {
+  font-size: 0.9rem;
+}
+
+pre {
+  overflow: auto;
+  font-size: 0.8rem;
+}
+
+pre.compact {
+  max-height: 120px;
+}
+
+.preview {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.fallback-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: var(--amber);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+.loading {
+  color: var(--green);
+}
+
+.health-card .grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .health-card .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .panel {
+    border: none;
+    box-shadow: none;
+  }
+  body {
+    background: #fff;
+  }
+}
